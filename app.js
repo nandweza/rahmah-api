@@ -7,6 +7,8 @@ const messageRouter = require('./routes/messageRoutes');
 
 const app = express();
 
+dotenv.config();
+
 //middleware
 app.use(cors());
 app.use(express.json());
@@ -17,11 +19,10 @@ app.use((req, res, next) => {
     next();
 });
 
-mongoose.connect("mongodb://localhost:27017/rahmahBD", {
-    useNewUrlParser: true
-})
-.then(() => console.log("DB Connected Successfully"))
-.catch((err) => console.log(err));
+mongoose.set('strictQuery', true);
+mongoose.connect(process.env.MONGO_URL)
+    .then(() => console.log("DB Connected Successfully"))
+    .catch((err) => console.log(err));
 
 app.use('/api/message/', messageRouter);
 
