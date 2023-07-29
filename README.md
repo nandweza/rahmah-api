@@ -20,15 +20,15 @@ To set up the API, follow these steps;
 ### Usage
 
 To run the API, use the following command;
-    + `npm start` or `yarn start`
-    + The API will be running at `http://localhost:3000`.
++ `npm start` or `yarn start`
++ The API will be running at `http://localhost:3000`.
 
 ## API Endpoints
 
 The RAHMAH BIRTHDAY API exposes the following endpoints;
 
-+ /api/message/create: This endpoint allows you to submit a birthday message. The message will be saved in the database for retrieval.
-+ /api/message/: This endpoint retrieves all the birthday messages stored in the database.
++ `/api/message/create` This endpoint allows you to submit a birthday message. The message will be saved in the database for retrieval.
++ `/api/message/` This endpoint retrieves all the birthday messages stored in the database.
 You can use this endpoint to display the messages on the frontend.
 
 ## Contribution
@@ -46,5 +46,4 @@ We appreciate your help in making this API even better!
 
  ## Author
 
- Nandweza Allan
- 
+ `Nandweza Allan`
